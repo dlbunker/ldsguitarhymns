@@ -1,0 +1,75 @@
+@charset "utf-8";
+html,body {
+	height: 100%;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+#main {
+	width: 1600px;
+	height: 1200px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../images/ldsguitarhymns.jpg);
+}
+
+#logo-header {
+	width: 951px;
+	padding-top: 120px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#nav-header {
+	width: 951px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	font: arial;
+	font-size: 11px;
+	color: white;
+}
+
+#nav-header a:hover {
+	font: arial;
+	font-size: 11px;
+	color: #dfa701;
+}
+
+#nav-header a.activenav {
+	font: arial;
+	font-size: 11px;
+	color: white;
+}
+
+#nav-header a {
+	font: arial;
+	font-size: 11px;
+	color: white;
+}
+
+#product {
+	width: 951px;
+	height: 294px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../images/lds_guitar_hymns_book.jpg);
+}
+
+#main-text {
+	font: arial;
+	font-size: 30px;
+	color: #6e6e6c;
+	padding-top: 20px;
+	padding-left: 400px;	
+}
