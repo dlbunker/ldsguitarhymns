@@ -4,22 +4,105 @@
 		  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
           <title>LDS Guitar Hymns</title>
           <link type="text/css" rel="stylesheet" media="all" href="./stylesheets/ldsguitarhymns.css"/>
-		  <script type="text/javascript" src="./javascripts/jquery-1.3.2.min"></script>
-		  <script type="text/javascript" src="./javascripts/jquery.sifr"></script>
-		  <script type="text/javascript" src="./javascripts/jquery.swfobject"></script>
+		  <script type="text/javascript" src="./javascripts/jquery-1.3.2.min.js"></script>
+		  <script type="text/javascript" src="./javascripts/jquery.sifr.js"></script>
+		  <script type="text/javascript" src="./javascripts/jquery.swfobject.js"></script>
+		  <script type="text/javascript" src="./javascripts/jquery.cycle.all.min.js"></script>
+
+	      <script type="text/javascript"><!--  
+				$(document).ready(function(){  
+				     $.sifr({ build: 436, version: 3, path: "./fonts/", save: true });  
+				     $(".sifrtext-600-single-line").sifr({ font: "Gotham-Light", forceSingleLine: true, width: 600 });  
+				     $(".sifrtext-850").sifr({ font: "Gotham-Light", height: 100, width: 850 });  
+				     $(".sifrtext-850-single-line").sifr({ font: "Gotham-Light", forceSingleLine: true, width: 850 });  
+				     $(".sifrtext").sifr({ font: "Gotham-Light", height: 100 });  
+				});  
+
+				$(document).ready(function(){  
+				      $('#product') 
+				      .cycle({ 
+				    	  fx:    'scrollLeft',
+				    	  speed: 1500,
+				    	  timeout: 0
+				      });
+				      $('#home-link').click(function() { 
+				    	  $('#product').cycle(0); 
+				      }); 
+				      $('#contact-link').click(function() { 
+				    	  $('#product').cycle(1); 
+				      });
+				      $('#faq-link').click(function() { 
+				    	  $('#product').cycle(2); 
+				      });
+				});  				     
+	      // -->
+	      </script>
 	</head>  
   	<body>
 		<div id="logo-header">
 			<img src="./images/lds_guitar_hymns_logo.png" border="0"/>
 		</div>
 		<div id="nav-header">
-			<a href="#">HOME</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">CONTACT</a>
+			<a id="home-link" href="#">HOME</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="contact-link" href="#">CONTACT</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="faq-link" href="#">FAQ</a>
 		</div>
 		<div id="product">
-			<div id="main-text">
-				Website Coming Soon
+			<div id="product-main">
+				<div id="main-text" class="sifrtext">
+					Learn how to play your favorite hymns on solo guitar.
+				</div>
+				<div id="main-text-normal" class="sifrtext">
+					These hymns have been selected from the Church of Jesus Christ of Latter Day Saints Hymn Book. Regardless of your playing ability, you will be able to find a piece in this book that is appropriate to play at any setting. Whether in church or at home, you will bring the familiar sounds of LDS hymns to others through the warm sounds of the guitar.
+					<br/><br/>
+				</div>
+				<div id="main-text-normal" class="sifrtext-600-single-line">
+					Looking for MP3's to practice with or listen to?...Coming Soon
+				</div>
+				<div id="main-text-normal">
+					<a href="http://www.atlasbooks.com/marktplc/02913.htm" style="color:#dfa701 !important;">Buy Now>></a>
+				</div>
 			</div>
+			<div id="product-contact">
+				<div id="contact-text" class="sifrtext-600-single-line">
+					Contact the Author
+				</div>
+				<div id="contact-text-normal" class="sifrtext-850">
+					Dan Bunker has been playing guitar for more than twenty years. He spent two years playing and studying jazz composition at the University of Utah. Classical study and performance have also been a large part of his repertoire for many years. He has spent more than fifteen years in private teaching and educating hundreds of guitar students in the Salt Lake City area.
+				</div>
+				<div id="contact-text-normal" class="sifrtext-850-single-line">
+					If you have any questions, comments, or suggestions about this book, feel free to contact Dan Bunker at the email address listed below.
+				</div>
+				<div id="contact-text-normal" class="sifrtext-850-single-line">
+					If you are in the Salt Lake area and would like to take private lessons from Dan or inquire about performances, just send him an email.
+				</div>
+				<div id="contact-text-normal">
+					Email: <a href="mailto:dan@ldsguitarhymns.com" style="color:#dfa701 !important;">dan@ldsguitarhymns.com</a>
+				</div>
+			</div>
+			<div id="product-faq">
+				<div id="faq-text" class="sifrtext-600-single-line">
+					How hard are these hymns to play?
+				</div>
+				<div id="faq-text-normal" class="sifrtext-850">
+					The arrangements in this book vary from beginner to the intermediate classical guitar player ability.  However, even advanced players can use these arrangements as part of their repertoire. 
+				</div>
+				<div id="faq-text" class="sifrtext-600-single-line">
+					Are the arrangements in Tab?
+				</div>
+				<div id="faq-text-normal" class="sifrtext-850">
+					Each arrangement contains standard staff notation, tablature, and chord diagrams. You will find the music notation of your preference in this book.   
+				</div>
+				<div id="faq-text" class="sifrtext-600-single-line">
+					How many hymn arrangements are in this book?
+				</div>
+				<div id="faq-text-normal" class="sifrtext-850">
+					There are 20 hymns taken from the standard LDS Hymn Book.  These hymns have been arranged specifically for guitar.   
+				</div>
+			</div>
+		</div>
+		<div id="nav-header">
+			&copy; 2010 - LDS Guitar Hymns
 		</div>
 		<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

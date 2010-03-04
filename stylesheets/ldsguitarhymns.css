@@ -55,13 +55,71 @@ body {
 	height: 294px;
 	margin-right: auto;
 	margin-left: auto;
+	overflow: hidden;
+}
+
+#product-main {
+	width: 951px;
+	height: 294px;
 	background-image: url(../images/lds_guitar_hymns_book.jpg);
+}
+
+#product-contact {
+	width: 951px;
+	height: 294px;
+	background-color: white;
+}
+
+#product-faq {
+	width: 951px;
+	height: 294px;
+	background-color: white;
 }
 
 #main-text {
 	font: arial;
 	font-size: 30px;
 	color: #6e6e6c;
+	padding-top: 25px;
+	padding-left: 370px;	
+}
+
+#main-text-normal {
+	font: arial;
+	font-size: 12px;
+	color: #6e6e6c;
+	padding-top: 15px;
+	padding-left: 370px;	
+}
+
+#contact-text {
+	font: arial;
+	font-size: 30px;
+	color: #6e6e6c;
+	padding-top: 25px;
+	padding-left: 50px;	
+}
+
+#contact-text-normal {
+	font: arial;
+	font-size: 12px;
+	color: #6e6e6c;
 	padding-top: 20px;
-	padding-left: 400px;	
+	padding-left: 50px;	
+}
+
+#faq-text {
+	font: arial;
+	font-size: 20px;
+	color: #6e6e6c;
+	padding-top: 25px;
+	padding-left: 50px;	
+}
+
+#faq-text-normal {
+	font: arial;
+	font-size: 12px;
+	color: #6e6e6c;
+	padding-top: 10px;
+	padding-left: 50px;	
 }
