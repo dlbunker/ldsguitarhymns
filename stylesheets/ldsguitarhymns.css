@@ -8,16 +8,8 @@ body {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
-}
-
-#main {
-	width: 1600px;
-	height: 1200px;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
 	background-image: url(../images/ldsguitarhymns.jpg);
+	background-repeat:no-repeat;
 }
 
 #logo-header {
