@@ -35,15 +35,23 @@
 				      });
 				      $('#home-link').click(function() { 
 				    	  $('#product').cycle(0); 
+						  $("#sample-div:visible").slideToggle(1500);
 				      }); 
 				      $('#hymns-link').click(function() { 
 				    	  $('#product').cycle(1); 
+						  $("#sample-div:visible").slideToggle(1500);
 				      });
 				      $('#contact-link').click(function() { 
 				    	  $('#product').cycle(2); 
+						  $("#sample-div:visible").slideToggle(1500);
 				      });
 				      $('#faq-link').click(function() { 
 				    	  $('#product').cycle(3); 
+						  $("#sample-div:visible").slideToggle(1500);
+				      });
+				      $('#sample-link').click(function() { 
+				    	  $('#product').cycle(4); 
+						  $("#sample-div:hidden").slideToggle(1500);
 				      });
 				});  				     
 	      // -->
@@ -57,7 +65,8 @@
 			<a id="home-link" href="#">HOME</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			<a id="hymns-link" href="#">HYMNS</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			<a id="contact-link" href="#">CONTACT</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a id="faq-link" href="#">FAQ</a>
+			<a id="faq-link" href="#">FAQ</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="sample-link" href="#">SAMPLE</a>
 		</div>
 		<div id="product">
 			<div id="product-main">
@@ -200,6 +209,15 @@
 					There are 20 hymns taken from the standard LDS Hymn Book.  These hymns have been arranged specifically for guitar.   
 				</div>
 			</div>
+			<div id="product-sample">
+				<div id="faq-text" class="sifrtext-850-single-line">
+					Each arrangement contains tablature, staff, and chord diagrams.  See sample below.
+				</div>
+				<br/>
+			</div>
+		</div>
+		<div id="sample-div">
+			<img src="./images/come_follow_me.png" border="0" />
 		</div>
 		<div id="nav-header">
 			&copy; 2010 - LDS Guitar Hymns

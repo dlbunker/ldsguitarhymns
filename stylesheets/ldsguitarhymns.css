@@ -57,6 +57,8 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	overflow: hidden;
+	z-index: -1;
+	background-color: white;
 }
 
 #product-main {
@@ -74,6 +76,12 @@ body {
 #product-faq {
 	width: 951px;
 	height: 294px;
+	background-color: white;
+}
+
+#product-sample {
+	width: 951px;
+	height: 60px;
 	background-color: white;
 }
 
@@ -148,4 +156,15 @@ body {
 	color: #6e6e6c;
 	padding-top: 5px;
 	padding-left: 50px;	
+}
+
+#sample-div {
+	display: none;
+	height: 700px;
+	width: 951px;
+	margin-top: -250px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	z-index: 999;
 }
