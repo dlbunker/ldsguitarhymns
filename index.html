@@ -35,22 +35,27 @@
 				      });
 				      $('#home-link').click(function() { 
 				    	  $('#product').cycle(0); 
+						  $('#product').attr('style', 'overflow: hidden; position: relative;');
 						  $("#sample-div:visible").slideToggle(1500);
 				      }); 
 				      $('#hymns-link').click(function() { 
 				    	  $('#product').cycle(1); 
+						  $('#product').attr('style', 'overflow: hidden; position: relative;');
 						  $("#sample-div:visible").slideToggle(1500);
 				      });
 				      $('#contact-link').click(function() { 
 				    	  $('#product').cycle(2); 
+						  $('#product').attr('style', 'overflow: hidden; position: relative;');
 						  $("#sample-div:visible").slideToggle(1500);
 				      });
 				      $('#faq-link').click(function() { 
 				    	  $('#product').cycle(3); 
+						  $('#product').attr('style', 'overflow: hidden; position: relative;');
 						  $("#sample-div:visible").slideToggle(1500);
 				      });
 				      $('#sample-link').click(function() { 
 				    	  $('#product').cycle(4); 
+						  $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
 						  $("#sample-div:hidden").slideToggle(1500);
 				      });
 				});  				     
