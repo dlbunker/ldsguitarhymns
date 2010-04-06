@@ -1,0 +1,10 @@
+#sample-div {
+	display: none;
+	height: 700px;
+	width: 951px;
+	margin-top: -250px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	z-index: 999;
+}
