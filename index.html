@@ -58,6 +58,8 @@
 				    	  $('#product').cycle(4); 
 						  if(!$.browser.msie) { 
 						    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
+						  } else {
+						    $('#sample-div').attr('style', $('#sample-div').attr('style') + 'z-index:99;');
 						  }
 						  $("#sample-div:hidden").slideToggle(1500);
 				      });
