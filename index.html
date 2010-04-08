@@ -56,7 +56,9 @@
 				      });
 				      $('#sample-link').click(function() { 
 				    	  $('#product').cycle(4); 
-						  $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
+						  if(!$.browser.msie) { 
+						    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
+						  }
 						  $("#sample-div:hidden").slideToggle(1500);
 				      });
 				});  				     
