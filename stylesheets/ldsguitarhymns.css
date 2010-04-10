@@ -51,6 +51,12 @@ body {
 	color: white;
 }
 
+#nav-header a span {
+	font: arial;
+	font-size: 11px;
+	color: white;
+}
+
 #product {
 	width: 951px;
 	height: 294px;
