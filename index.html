@@ -9,23 +9,12 @@
           <link type="text/css" rel="stylesheet" media="all" href="./stylesheets/ldsguitarhymns.css"/>
 		  <!--[if gte IE 6]><link type="text/css" rel="stylesheet" media="all" href="./stylesheets/ldsguitarhymns-ie.css"/><![endif]-->
 		  <script type="text/javascript" src="./javascripts/jquery-1.3.2.min.js"></script>
-		  <script type="text/javascript" src="./javascripts/jquery.sifr.js"></script>
-		  <script type="text/javascript" src="./javascripts/jquery.swfobject.js"></script>
 		  <script type="text/javascript" src="./javascripts/jquery.cycle.all.min.js"></script>
+          <script type="text/javascript" src="./javascripts/jquery.address-1.4.min.js"></script>
+          <script type="text/javascript" src="./javascripts/typeface-0.15.js"></script>
+          <script type="text/javascript" src="./javascripts/gotham_light_regular.typeface.js"></script>
 
 	      <script type="text/javascript"><!--  
-				$(document).ready(function(){ 
-					if(!$.browser.msie) { 
-					     $.sifr({ build: 436, version: 3, path: "./fonts/", save: true });  
-					     $(".sifrtext-600-single-line").sifr({ font: "Gotham-Light", forceSingleLine: true, width: 600 });  
-					     $(".sifrtext-850").sifr({ font: "Gotham-Light", height: 100, width: 850 });  
-					     $(".sifrtext-600").sifr({ font: "Gotham-Light", height: 100, width: 600 });  
-					     $(".sifrtext-600-short-height").sifr({ font: "Gotham-Light", height: 30, width: 600 });  
-					     $(".sifrtext-850-single-line").sifr({ font: "Gotham-Light", forceSingleLine: true, width: 850 });  
-					     $(".sifrtext").sifr({ font: "Gotham-Light", height: 100 });
-					     $(".sifrtext-short-height").sifr({ font: "Gotham-Light", height: 70 });
-					}  
-				});  
 
 				$(document).ready(function(){  
 				      $('#product') 
@@ -34,36 +23,41 @@
 				    	  speed: 1500,
 				    	  timeout: 0
 				      });
-				      $('#home-link').click(function() { 
-				    	  $('#product').cycle(0); 
-						  $('#product').attr('style', 'overflow: hidden; position: relative;');
-						  $("#sample-div:visible").slideToggle(1500);
-				      }); 
-				      $('#hymns-link').click(function() { 
-				    	  $('#product').cycle(1); 
-						  $('#product').attr('style', 'overflow: hidden; position: relative;');
-						  $("#sample-div:visible").slideToggle(1500);
-				      });
-				      $('#contact-link').click(function() { 
-				    	  $('#product').cycle(2); 
-						  $('#product').attr('style', 'overflow: hidden; position: relative;');
-						  $("#sample-div:visible").slideToggle(1500);
-				      });
-				      $('#faq-link').click(function() { 
-				    	  $('#product').cycle(3); 
-						  $('#product').attr('style', 'overflow: hidden; position: relative;');
-						  $("#sample-div:visible").slideToggle(1500);
-				      });
-				      $('#sample-link').click(function() { 
-				    	  $('#product').cycle(4); 
-						  if(!$.browser.msie) { 
-						    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
-						  } else {
-						    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
-						    $('#sample-div').attr('style', $('#sample-div').attr('style') + 'z-index:99;');
+				
+					  $.address.change(function(event) {  
+						  if(event.value == "/home") {
+					    	  $('#product').cycle(0); 
+							  $('#product').attr('style', 'overflow: hidden; position: relative;');
+							  $("#sample-div:visible").slideToggle(1500);
+							  // $("#product").attr('style', '590');
+						  } else if(event.value == "/lds-guitar-hymns-volume-1") {
+					    	  $('#product').cycle(1); 
+							  $('#product').attr('style', 'overflow: hidden; position: relative;');
+							  $("#sample-div:visible").slideToggle(1500);
+						  } else if(event.value == "/lds-guitar-hymns-volume-2") {
+					    	  $('#product').cycle(2); 
+							  $('#product').attr('style', 'overflow: hidden; position: relative;');
+							  $("#sample-div:visible").slideToggle(1500);
+						  } else if(event.value == "/contact") {
+					    	  $('#product').cycle(3); 
+							  $('#product').attr('style', 'overflow: hidden; position: relative;');
+							  $("#sample-div:visible").slideToggle(1500);
+						  } else if(event.value == "/faq") {
+					    	  $('#product').cycle(4); 
+							  $('#product').attr('style', 'overflow: hidden; position: relative;');
+							  $("#sample-div:visible").slideToggle(1500);
+						  } else if(event.value == "/sample") {
+					    	  $('#product').cycle(5); 
+							  if(!$.browser.msie) { 
+							    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
+							  } else {
+							    $('#product').attr('style', $('#product').attr('style') + 'z-index:-1;');
+							    $('#sample-div').attr('style', $('#sample-div').attr('style') + 'z-index:99;');
+							  }
+							  $("#sample-div:hidden").slideToggle(1500);
 						  }
-						  $("#sample-div:hidden").slideToggle(1500);
-				      });
+					  });
+									
 				});  				     
 	      // -->
 	      </script>
@@ -73,22 +67,27 @@
 			<img src="./images/lds_guitar_hymns_logo.png" border="0"/>
 		</div>
 		<div id="nav-header">
-			<a id="home-link" href="#">HOME</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a id="hymns-link" href="#">HYMNS</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a id="contact-link" href="#">CONTACT</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a id="faq-link" href="#">FAQ</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a id="sample-link" href="#">SAMPLE</a>			
+			<a id="home-link" href="/home" rel="address:/home">HOME</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="hymns-1-link" href="/lds-guitar-hymns-volume-1" rel="address:/lds-guitar-hymns-volume-1">LDS GUITAR HYMNS VOLUME 1</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="hymns-2-link" href="/lds-guitar-hymns-volume-2" rel="address:/lds-guitar-hymns-volume-2">LDS GUITAR HYMNS VOLUME 2</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="contact-link" href="/contact" rel="address:/contact">CONTACT</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="faq-link" href="/faq" rel="address:/faq">FAQ</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a id="sample-link" href="/sample" rel="address:/sample">SAMPLE</a>			
 		</div>
 		<div id="product">
 			<div id="product-main">
-				<div id="main-text" class="sifrtext">
-					Learn how to play your favorite hymns on solo guitar.
+				<div id="main-text" class="typeface-js">
+					Learn how to play your favorite <br/>
+					hymns on solo guitar.
 				</div>
-				<div id="main-text-normal" class="sifrtext-short-height" style="padding-top: 0px !important;">
-					These hymns have been selected from the Church of Jesus Christ of Latter Day Saints Hymn Book. Regardless of your playing ability, you will be able to find a piece in this book that is appropriate to play at any setting. Whether in church or at home, you will bring the familiar sounds of LDS hymns to others through the warm sounds of the guitar.
+				<div id="main-text-normal" class="typeface-js" style="padding-top: 0px !important;">
+					These 20 hymns have been selected from the Church of Jesus Christ of Latter Day Saints Hymn Book. Regardless of your playing ability, you will be able to find a piece in this book that is appropriate to play at any setting. Whether in church or at home, you will bring the familiar sounds of LDS hymns to others through the warm sounds of the guitar.
 					<br/><br/>
 				</div>
-				<div id="main-text-normal" class="sifrtext-600-single-line">
+				<div id="main-text-medium" class="typeface-js">
+					Volume One
+				</div>
+				<div id="main-text-normal" class="typeface-js">
 					Looking for MP3's to practice with or listen to?...<a href="http://www.royalcirquepub.com/products/detail/3" style="color:#dfa701 !important;">Get Them Here >></a>
 				</div>
 				<div id="main-text-normal">
@@ -97,106 +96,234 @@
 				<div id="main-text-normal">
 					<a href="http://www.amazon.com/LDS-Guitar-Hymns-Dan-Bunker/dp/0982619820/ref=pd_rhf_p_t_1" style="color:#dfa701 !important;">Buy Now (Amazon) >></a>
 				</div>
+				<div id="main-text-normal" class="typeface-js">
+					<br/><br/><br/>
+					Volume 2 contains another 26 hymns arranged specifically for solo guitar.  Each arrangement includes staff, tablature and chord notations.
+					<br/><br/>
+				</div>
+				<div id="main-text-medium" class="typeface-js">
+					Volume Two
+				</div>
+				<div id="main-text-normal" class="typeface-js">
+					Looking for MP3's to practice with or listen to?  Coming Soon...
+				</div>
+				<div id="main-text-normal">
+					<a href="http://www.royalcirquepub.com/products/detail/5" style="color:#dfa701 !important;">Buy Now (Publisher) >></a>
+				</div>
+				<div id="main-text-normal">
+					<a href="http://www.amazon.com/LDS-Guitar-Hymns-Dan-Bunker/dp/0982619804/ref=sr_1_4" style="color:#dfa701 !important;">Buy Now (Amazon) >></a>
+				</div>
 			</div>
 			<div id="product-hymns">
-				<div id="hymns-text" class="sifrtext-850-single-line">
+				<div id="hymns-text" class="typeface-js">
 					Volume 1 Hymn Arrangements in Tab and Staff
 				</div>
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Abide With Me!
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							I Need Thee Every Hour
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							A Poor Wayfaring Man Of Grief
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Israel, Israel, God Is Calling
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Come, Come, Ye Saints
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Joseph Smith’s First Prayer
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Come, Follow Me
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							More Holiness Give Me
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Did You Think To Pray?
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Nearer, My God, To Thee
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							For The Beauty Of The Earth
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							O My Father
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							God Be With You Till We Meet Again
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Praise To The Man
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							How Firm A Foundation
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							Redeemer Of Israel
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							High On The Mountain Top 
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							There Is A Green Hill Far Away
 						</td>
 					</tr>
 					<tr>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							I Know That My Redeemer Lives
 						</td>
-						<td id="hymns-text-normal" width="50%" class="sifrtext-600-single-line">
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
 							We Are Sowing
 						</td>
 					</tr>
 				</table>
 			</div>
+			<div id="product-hymns-2">
+				<div id="hymns-text" class="typeface-js">
+					Volume 2 Hymn Arrangements in Tab and Staff
+				</div>
+				<table cellspacing="0" cellpadding="0" border="0" width="100%">
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Abide With Me; 'Tis Eventide
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							I'll Go Where You Want Me To Go
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							A Mighty Fortress Is Our God
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							I Stand All Amazed
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Be Thou Humble
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Jesus Once Of Humble Birth
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Come, Listen To A Prophet's Voice
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Jesus, The Very Thought Of Thee
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Come Unto Jesus
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Love At Home
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Come, We That Love The Lord
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Now Let Us Rejoice
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Father In Heaven
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							O Savior, Thou Who Wearest A Crown
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Gently Raise The Sacred Strain
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Our Savior's Love
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							Glory To God On High
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							The Lord Is My Shepherd
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							God Is Love
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							'Tis Sweet To Sing The Matchless Love
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							God Speed The Right
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							The Spirit Of God
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							How Gentle God's Command
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							We Thank Thee, O God, For A Prophet
+						</td>
+					</tr>
+					<tr>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							How Great The Wisdom And The Love
+						</td>
+						<td id="hymns-text-normal" width="50%" class="typeface-js">
+							While Of These Emblems We Partake
+						</td>
+					</tr>
+				</table>
+			</div>
 			<div id="product-contact">
-				<div id="contact-text" class="sifrtext-600-single-line">
+				<div id="contact-text" class="typeface-js">
 					Contact the Author
 				</div>
-				<div id="contact-text-normal" class="sifrtext-600" style="padding-top: 0px !important;">
-					Dan Bunker has been playing guitar for more than twenty years. He spent two years playing and studying jazz composition at the University of Utah. Classical study and performance have also been a large part of his repertoire for many years. He has spent more than fifteen years in private teaching and educating hundreds of guitar students in the Salt Lake City area.
+				<div id="contact-text-normal" class="typeface-js" style="padding-top: 0px !important;">
+					Dan Bunker has been playing guitar for more than twenty-three years. He spent two years playing and studying jazz composition at the University of Utah. Classical study and performance have also been a large part of his repertoire for many years. He has spent more than fifteen years in private teaching and educating hundreds of guitar students in the Salt Lake City area.
 				</div>
 				<br/>
-				<div id="contact-text-normal" class="sifrtext-600-short-height">
+				<div id="contact-text-normal" class="typeface-js">
 					If you have any questions, comments, or suggestions about this book, feel free to contact Dan Bunker at the email address listed below.
 				</div>
-				<div id="contact-text-normal" class="sifrtext-600-short-height">
+				<div id="contact-text-normal" class="typeface-js">
 					If you are in the Salt Lake area and would like to take private lessons from Dan or inquire about performances, just send him an email.
 				</div>
 				<div id="contact-text-normal">
@@ -204,27 +331,33 @@
 				</div>
 			</div>
 			<div id="product-faq">
-				<div id="faq-text" class="sifrtext-600-single-line">
+				<div id="faq-text" class="typeface-js">
 					How hard are these hymns to play?
 				</div>
-				<div id="faq-text-normal" class="sifrtext-850">
+				<div id="faq-text-normal" class="typeface-js">
 					The arrangements in this book vary from beginner to the intermediate classical guitar player ability.  However, even advanced players can use these arrangements as part of their repertoire. 
 				</div>
-				<div id="faq-text" class="sifrtext-600-single-line">
+				<div id="faq-text" class="typeface-js">
 					Are the arrangements in Tab?
 				</div>
-				<div id="faq-text-normal" class="sifrtext-850">
+				<div id="faq-text-normal" class="typeface-js">
 					Each arrangement contains standard staff notation, tablature, and chord diagrams. You will find the music notation of your preference in this book.   
 				</div>
-				<div id="faq-text" class="sifrtext-600-single-line">
-					How many hymn arrangements are in this book?
+				<div id="faq-text" class="typeface-js">
+					How many hymn arrangements are in these books?
 				</div>
-				<div id="faq-text-normal" class="sifrtext-850">
-					There are 20 hymns taken from the standard LDS Hymn Book.  These hymns have been arranged specifically for guitar.   
+				<div id="faq-text-normal" class="typeface-js">
+					Volume 1 contains 20 hymns taken from the standard LDS Hymn Book and Volume 2 contains 26 hymns.  These hymns have been arranged specifically for guitar.   
+				</div>
+				<div id="faq-text" class="typeface-js">
+					Are there recordings of these hymns that I can hear or practice along with?
+				</div>
+				<div id="faq-text-normal" class="typeface-js">
+					You can find the recordings for each Volume on the publishers website (<a href="http://www.royalcirquepub.com">Royal Cirque Publishing</a>).  Each hymn is recorded and performed in a slow tempo and the standard tempo to aid in practicing.   
 				</div>
 			</div>
 			<div id="product-sample">
-				<div id="faq-text" class="sifrtext-850-single-line">
+				<div id="faq-text" class="typeface-js">
 					Each arrangement contains tablature, staff, and chord diagrams.  See sample below.
 				</div>
 				<br/>
@@ -234,7 +367,7 @@
 			<img src="./images/come_follow_me.png" border="0" />
 		</div>
 		<div id="nav-header">
-			&copy; 2010 - LDS Guitar Hymns
+			&copy; 2012 - LDS Guitar Hymns
 		</div>
 		<div id="nav-header">
 			<script type="text/javascript" src="http://static.ak.connect.facebook.com/connect.php/en_US"></script><script type="text/javascript">FB.init("ffe7394939292a4250f65176f4ae1ebd");</script><fb:fan profile_id="372125715809" stream="0" connections="0" logobar="1" height="100" width="200"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/LDS-Guitar-Hymns-Volume-1/372125715809">LDS Guitar Hymns - Volume 1</a> on Facebook</div>
